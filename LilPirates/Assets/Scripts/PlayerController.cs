@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 20.0f;
     public float turnSpeed = 10.0f;
 
+    public float bobSpeed = 1.1f;
+    private string bobber = "DOWN";
+
     
 
     // Start is called before the first frame update
@@ -28,5 +31,29 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * vInput);
         transform.Rotate(Vector3.up, Time.deltaTime * speed * hInput);
 
+        
+
+    }
+
+    void FixedUpdate() {
+        //Controls the boat bobbing
+        
+        if(transform.position.y > 0f)
+        {
+            bobber = "DOWN";
+        }
+
+        else if(transform.position.y < -3f)
+        {
+            bobber = "UP";
+        }
+        
+        if(transform.position.y < 0f & bobber == "UP"){
+            transform.Translate(Vector3.up * Time.deltaTime * bobSpeed);
+        }
+
+        else if(transform.position.y > -3f & bobber == "DOWN"){
+            transform.Translate(Vector3.down * Time.deltaTime * bobSpeed);
+        }
     }
 }
