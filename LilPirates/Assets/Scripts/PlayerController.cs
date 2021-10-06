@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             bobber = "DOWN";
         }
 
-        else if(transform.position.y < -3f)
+        else if(transform.position.y < -1f)
         {
             bobber = "UP";
         }
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             transform.Translate(Vector3.up * Time.deltaTime * bobSpeed);
         }
 
-        else if(transform.position.y > -3f & bobber == "DOWN"){
+        else if(transform.position.y > -1f & bobber == "DOWN"){
             transform.Translate(Vector3.down * Time.deltaTime * bobSpeed);
         }
     }
