@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 20.0f;
     public float turnSpeed = 10.0f;
 
-    public float bobSpeed = 1.1f;
-    private string bobber = "DOWN";
+    //public float bobSpeed = 1.1f;
+    //private string bobber = "DOWN";
 
     
 
@@ -38,22 +38,22 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
         //Controls the boat bobbing
         
-        if(transform.position.y > 0f)
-        {
-            bobber = "DOWN";
-        }
+        // if(transform.position.y > 0f)
+        // {
+        //     bobber = "DOWN";
+        // }
 
-        else if(transform.position.y < -1f)
-        {
-            bobber = "UP";
-        }
+        // else if(transform.position.y < -1f)
+        // {
+        //     bobber = "UP";
+        // }
         
-        if(transform.position.y < 0f & bobber == "UP"){
-            transform.Translate(Vector3.up * Time.deltaTime * bobSpeed);
-        }
+        // if(transform.position.y < 0f & bobber == "UP"){
+        //     transform.Translate(Vector3.up * Time.deltaTime * bobSpeed);
+        // }
 
-        else if(transform.position.y > -1f & bobber == "DOWN"){
-            transform.Translate(Vector3.down * Time.deltaTime * bobSpeed);
-        }
+        // else if(transform.position.y > -1f & bobber == "DOWN"){
+        //     transform.Translate(Vector3.down * Time.deltaTime * bobSpeed);
+        // }
     }
 }
