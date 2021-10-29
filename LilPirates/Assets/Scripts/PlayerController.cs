@@ -13,8 +13,16 @@ public class PlayerController : MonoBehaviour
     //public float bobSpeed = 1.1f;
     //private string bobber = "DOWN";
 
-    
+    private WeaponController weapon;
 
+    
+    void Awake()
+    {
+         weapon = GetComponent<WeaponController>();    
+    }
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +37,15 @@ public class PlayerController : MonoBehaviour
 
         //Moves boat around screen
         transform.Translate(Vector3.forward * Time.deltaTime * speed * vInput);
-        transform.Rotate(Vector3.up, Time.deltaTime * speed * hInput);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * hInput);
+
+        if(Input.GetButton("Fire1"))
+        {
+            if(weapon.CanShoot())
+            {
+                weapon.Shoot();
+            }
+        }
 
         
 
