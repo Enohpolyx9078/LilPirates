@@ -31,6 +31,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - Vector1_02daef7491114388b405faf55e9cd29b: 1
+    - Vector1_423cbc0495064d92a7f929ae7ed47af1: 5
+    - Vector1_e0eee1320b174493b3b8f0f87b4ce0e9: 0.1
+    - Vector1_ff4f2d45014343c6bd62e35dd98c5515: 5
+    m_Colors:
+    - Color_47f156ef40ff4d30996e5fa78b5b4906: {r: 0.282353, g: 1.372549, b: 1.945098, a: 0}
+    - Color_ab6922d0dc354f00a50f8b5ea2aeb100: {r: 0, g: 0.6423671, b: 1, a: 0}
   m_BuildTextureStacks: []
